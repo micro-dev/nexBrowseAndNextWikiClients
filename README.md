@@ -22,7 +22,7 @@ The lines:
 
   key=
 
-will need configuring with values for the software to work.
+need configuring with values for the software to work.
 
 
 ----
