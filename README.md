@@ -26,9 +26,9 @@ Both apps have .cfg files
 
 The lines:
 
-  server=
+  &nbsp;&nbsp;&nbsp;&nbsp;server=
 
-  key=
+  &nbsp;&nbsp;&nbsp;&nbsp;key=
 
 need configuring with values for the software to work.
 
