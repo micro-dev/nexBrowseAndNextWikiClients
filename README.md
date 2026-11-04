@@ -38,3 +38,5 @@ need configuring with values for the software to work.
 Proof of Concept only. May well break, especially if overloaded.
 
 Component part Six Labors license for the web service is temporary and will expire after some time.
+
+Ai Coded.
