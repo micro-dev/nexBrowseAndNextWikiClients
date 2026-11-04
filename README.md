@@ -12,7 +12,9 @@ NextWiki is a web client to display Wikipedia content on the Spectrum Next
 
 ![My Image2](nexWiki1.jpg)
 
-Both have GDE files for help on the Next
+----
+
+Both apps have GDE files for help on the Next
 
 
 ----
