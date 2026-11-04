@@ -18,9 +18,9 @@ Both apps have .cfg files
 
 The lines:
 
-server=
+  server=
 
-key=
+  key=
 
 will need configuring with values for the software to work.
 
