@@ -5,7 +5,7 @@ NextWiki is a web client to display Wikipedia content on the Spectrum Next
 Both have GDE files for help on the Next
 
 ![My Image](nexBrowse1.jpg)
-![My Image](nexWiki1.jpg)
+![My Image2](nexWiki1.jpg)
 
 ----
 
