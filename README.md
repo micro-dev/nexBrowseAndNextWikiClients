@@ -2,7 +2,7 @@ NexBrowse is a web browser for the Spectrum Next
 
 ![My Image](nexBrowse1.jpg)
 
-Works best for websites with text and images that can be browsed. 
+Works best for websites with text and images that can be browsed such as https://www.specnext.com 
 There is no feature for submitting forms such as Google search. 
 
 ----
