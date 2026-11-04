@@ -1,0 +1,386 @@
+@title NexBrowse User Guide
+@author NexBrowse
+@version 1.0
+@date 2026/11/01
+@index INDEX
+@rem NextGuide document. Open it from the NextZXOS Browser, or type: .guide nexbrowse.gde
+
+@-------------------------------------------------------------------------------
+@node MAIN
+@next START
+
+@{c}@{h1}NexBrowse
+
+@{c}A text web browser for the ZX Spectrum Next
+
+NexBrowse shows web pages as text, with highlighted links that you can
+follow. A NexBrowse server on the internet fetches each page and turns it
+into a few kilobytes of plain text that the Next can display quickly.
+
+ @{" Starting NexBrowse " LINK START}
+ @{" The screen " LINK SCREEN}
+ @{" Keys when reading a page " LINK KEYS_PAGE}
+ @{" Keys in the address field " LINK KEYS_URL}
+ @{" Typing symbols in addresses " LINK SYMBOLS}
+ @{" Links and long pages " LINK LINKS}
+ @{" Pictures " LINK PICTURES}
+ @{" Settings: NEXBROWSE.CFG " LINK CONFIG}
+ @{" Messages on the status line " LINK MESSAGES}
+ @{" What NexBrowse cannot do " LINK LIMITS}
+ @{" Quick key reference " LINK QUICKREF}
+
+@{h2}Reading this guide
+
+@{i}Right@{ui}/@{i}Left@{ui} select a link, @{i}ENTER@{ui} follows it, @{i}B@{ui} goes back.
+@{i}N@{ui} and @{i}P@{ui} turn the pages, @{i}C@{ui} returns to the contents, @{i}Q@{ui} quits.
+
+@-------------------------------------------------------------------------------
+@node START
+@next SCREEN
+@prev MAIN
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Starting NexBrowse
+
+@{h2}Before the first use
+
+1) The Next's Wi-Fi module must have joined your network once. Use the
+   NextZXOS Wi-Fi setup program. The module remembers the network.
+2) NexBrowse.nex and NEXBROWSE.CFG must be in the same folder on the SD
+   card, and NEXBROWSE.CFG must name your NexBrowse server
+   (see @{" Settings " LINK CONFIG}).
+
+@{h2}Running it
+
+Open the NextZXOS @{b}Browser@{ub}, go to the folder, select @{b}NexBrowse.nex@{ub}
+and press @{i}ENTER@{ui}. From NextBASIC you can also type:
+
+    @{b}.nexload nexbrowse.nex@{ub}
+
+The welcome screen shows the server (only its first 5 letters; the rest
+appear as *) and whether NEXBROWSE.CFG was read.
+
+The address field already holds your home page. Press @{i}ENTER@{ui} to open
+it, or type another address first. The first page takes a little longer
+because NexBrowse checks the Wi-Fi module.
+
+@-------------------------------------------------------------------------------
+@node SCREEN
+@next KEYS_PAGE
+@prev START
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}The screen
+
+From top to bottom:
+
+ @{b}Address bar@{ub}   " URL " then the address field. Type an address
+               and press ENTER to open it. On the right, the
+               [ ] Images box: press I to tick it (see Pictures).
+ @{b}Title bar@{ub}     The page title. "Page 2/7" on the right means you are
+               reading section 2 of 7 of a long page.
+ @{b}Page text@{ub}     Headings in yellow, text in white, links in purple.
+               The selected link is shown in reverse.
+               @{b}[ Next Page ]@{ub} appears after the last line when the page
+               has more sections.
+ @{b}Help line@{ub}     The keys you can use right now.
+ @{b}Status line@{ub}   What NexBrowse is doing, or what went wrong (errors
+               appear in red).
+
+One thing has @{i}focus@{ui} at a time: the address field or the page. The focused one is highlighted, and the help line changes with it.
+@{i}EXTEND MODE@{ui} moves the focus, but you rarely need it: @{i}U@{ui} jumps to
+the address field and @{i}ENTER@{ui} or a cursor key goes back to the page.
+
+@-------------------------------------------------------------------------------
+@node KEYS_PAGE
+@next KEYS_URL
+@prev SCREEN
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Keys when reading a page
+
+@{i}Key                 What it does@{ui}
+
+Cursor Down/Right   Choose the next link
+Cursor Up/Left      Choose the previous link
+ENTER               Open the chosen link (or [ Next Page ])
+SPACE               Scroll down one screen
+DELETE              Scroll up one screen
+N                   Next page of a long article
+B                   Back to where you were before
+R                   Reload
+H                   Home page
+U                   Type a new address
+I                   Pictures on/off
+Q                   Quit (then Y to confirm)
+
+That is all you need. Links are chosen in reading order; if the next link
+is a long way down, the cursor key scrolls the text instead so you never
+skip over anything. The status line shows where the chosen link leads.
+
+These keys work the same way as in this guide viewer.
+
+@{h2}Extra keys
+
+EXTEND MODE        Switch between the page and the address field
+EDIT               Un-choose the highlighted link
+INV/TRUE VIDEO     Also scroll down / up one screen
+@-------------------------------------------------------------------------------
+@node KEYS_URL
+@next SYMBOLS
+@prev KEYS_PAGE
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Keys in the address field
+
+@{i}Key                 What it does@{ui}
+
+letters, numbers    Type (hold CAPS SHIFT for capitals)
+SYMBOL SHIFT + key  Type a symbol such as : / . ?  - see @{" Symbols " LINK SYMBOLS}
+Cursor Left/Right   Move the cursor
+DELETE              Rub out the character before the cursor
+GRAPH               Clear the whole field
+ENTER               Go to the address
+EDIT                Cancel: put back the page's address and return
+                    to the page
+Cursor Up/Down      Go back to the page
+
+@{h2}Addresses
+
+You can leave out the @{i}https://@{ui} part: @{b}en.wikipedia.org@{ub} works.
+Spaces are not allowed in an address.
+@-------------------------------------------------------------------------------
+@node SYMBOLS
+@next LINKS
+@prev KEYS_URL
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Typing symbols in addresses
+
+Hold SYMBOL SHIFT and press the key:
+
+@{i}Symbol  Key        Symbol  Key        Symbol  Key@{ui}
+  :      Z            /      V            .      M
+  ?      C            =      L            &      6
+  -      J            +      K            _      0
+  %      5            #      3            ~      A
+  @@      2            ,      N            *      B
+  ;      O            "      P            '      7
+  !      1            $      4            (  )   8  9
+  [      Y            ]      U            <  >   R  T
+  |      S            \      D            {  }   F  G
+  ^      H            `      X
+
+Example: @{b}en.wikipedia.org/wiki/ZX_Spectrum@{ub} is typed with
+SYMBOL SHIFT + M for each full stop, SYMBOL SHIFT + V for each slash and
+SYMBOL SHIFT + 0 for the underscore.
+
+@-------------------------------------------------------------------------------
+@node LINKS
+@next PICTURES
+@prev SYMBOLS
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Links and long pages
+
+@{h2}Following links
+
+Press Down to select the first link, keep pressing to move through the
+links, then press ENTER. The new page replaces the current one, and B
+brings the old one back.
+
+@{h2}Long pages
+
+The server cuts long pages into sections of about 2000 characters, so the
+first part appears quickly. "Page 1/12" in the title bar means there are
+12 sections. To read on, press @{b}N@{ub}, or select @{b}[ Next Page ]@{ub} at
+the end of the text and press ENTER. B steps back a section at a time.
+
+Within a section, SPACE scrolls down a screen and DELETE scrolls back up.
+
+@{h2}History
+
+B remembers the last 6 pages, including which section you were reading.
+
+@{h2}Expired pages
+
+The server keeps pages for a while (up to an hour). If you come back after
+that, NexBrowse fetches the page again by itself and carries on.
+
+@-------------------------------------------------------------------------------
+@node PICTURES
+@next CONFIG
+@prev LINKS
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Pictures
+
+NexBrowse can show small pictures from a page. They are off at first, so
+pages load as fast as possible.
+
+Press @{b}I@{ub} on a page to tick the box at the top right:
+
+    @{b}[X] Images@{ub}
+
+The text appears first, as usual, with a line such as
+@{b}[Image] Rainbow test card@{ub} where each picture goes. Then the pictures
+arrive one by one and the text moves down to make room for them. You can
+keep reading and pressing keys while they load.
+
+Press @{b}I@{ub} again to hide the pictures.
+
+@{h2}What to expect
+
+Pictures are small (at most about 160 by 120 dots) and use 16 colours, so
+they are a rough preview. Each section of a page shows at most 2 pictures.
+Icons, logos drawn as SVG, and pictures added by JavaScript are not shown.
+
+If a picture cannot be fetched you see @{b}[Image not available]@{ub} and its
+description instead. The text is not affected.
+
+To have the box ticked every time NexBrowse starts, put @{b}images=1@{ub} in
+NEXBROWSE.CFG.
+
+@-------------------------------------------------------------------------------
+@node CONFIG
+@next MESSAGES
+@prev PICTURES
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Settings: NEXBROWSE.CFG
+
+NEXBROWSE.CFG is a text file in the same folder as NexBrowse.nex. Each line
+is @{b}name=value@{ub}; lines starting with # are ignored. Any line can be left
+out to use the built-in default.
+
+@{i}Setting          Meaning@{ui}
+server=          Your NexBrowse server's name, for example
+                 myserver.azurewebsites.net (host:port also works)
+port=            Server port, normally 80
+key=             Access key, if your server needs one
+home=            The page opened at start-up
+text_colour=     Colour of page text          (default white)
+link_colour=     Colour of links              (default purple)
+screen_rows=     Rows used on screen, 22 to 32 (default 24)
+images=          1 = pictures on at start-up   (default 0)
+tls=             Leave at 0 (experimental)
+
+@{h2}Colours
+
+Use a name: white black grey lightgrey red green blue yellow cyan magenta
+purple orange pink lightblue lightgreen brown. Or give a Next colour number
+(RRRGGGBB) such as 171, 0xAB, $AB or #AB.
+
+@{h2}screen_rows
+
+24 uses the normal Spectrum screen area, which every TV and monitor shows.
+If your display shows more of the border, try 26, 28 or even 32 to see more
+text at once. If the top or bottom gets cut off, use a lower number.
+
+@-------------------------------------------------------------------------------
+@node MESSAGES
+@next LIMITS
+@prev CONFIG
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Messages on the status line
+
+@{b}Wi-Fi module not responding@{ub}
+  The Wi-Fi module did not answer. Check it is fitted; try .uart and AT.
+@{b}Wi-Fi not connected - run the NextZXOS Wi-Fi setup@{ub}
+  The module has not joined a network. Run the Wi-Fi setup once.
+@{b}Connection failed (server unreachable or DNS)@{ub}
+  Check server= and port= in NEXBROWSE.CFG, and that the server is running.
+@{b}Connection failed: Connection timed out@{ub}
+  Weak Wi-Fi, or the server was asleep. Press R to try again.
+@{b}Error: Access key missing or wrong@{ub}
+  key= in NEXBROWSE.CFG does not match the server.
+@{b}Error: Destination is not allowed@{ub}
+  The server refuses local and private addresses. This is normal.
+@{b}Error: Site returned HTTP 404@{ub} (or another number)
+  The website itself reported an error.
+@{b}Error: Not a web page@{ub}
+  The link leads to an image, PDF or download. Only text is shown.
+@{b}Invalid URL@{ub}
+  The address contains a space or does not look like an address.
+@{b}Page loaded, but the response was incomplete@{ub}
+  The connection dropped. Press R.
+@{b}Page expired on the server - reloading...@{ub}
+  Normal after a long pause; NexBrowse fetches the page again.
+@{b}Image not available@{ub}
+  A picture could not be fetched or is not a supported kind. Only that
+  picture is missing; the text is fine.
+@{b}Not enough free memory for images@{ub}
+  NextZXOS had no spare memory for pictures. Text browsing still works.
+
+After any error the page you were reading stays on screen, and the address
+you typed is kept so you can correct it. B and R still work.
+
+@-------------------------------------------------------------------------------
+@node LIMITS
+@next QUICKREF
+@prev MESSAGES
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}What NexBrowse cannot do
+
+@{b}No JavaScript.@{ub} Pages that build their text with JavaScript, and some
+"checking your browser" pages, show little or nothing.
+
+@{b}No forms, logins or downloads.@{ub} Text, links and small pictures are
+shown. To search, type the search address directly, for example
+en.wikipedia.org/wiki/Special:Search?search=sinclair
+
+@{b}Plain letters only.@{ub} Accents are removed (an accented e shows as a
+plain e) and other alphabets, such as Japanese or Cyrillic, cannot be shown.
+
+@{b}Not private.@{ub} The connection between the Next and the NexBrowse server
+is not encrypted, so do not use NexBrowse for anything confidential.
+
+@{b}Menus are moved to the end.@{ub} The server shows the main text of a page
+first. Anything that looks like a long menu (a list of short links, or a
+bar of links) appears after the text, under "Menus" or "Site navigation".
+If a page is mostly links, it is left as it is.
+
+@-------------------------------------------------------------------------------
+@node QUICKREF
+@prev LIMITS
+@toc MAIN
+@{r}NexBrowse Guide
+@{c}@{h1}Quick key reference
+
+@{h2}Reading a page
+ Cursor keys   choose a link        ENTER    open it
+ SPACE         scroll down          DELETE   scroll up
+ N   next page      B   back        R   reload
+ H   home           U   new address Q   quit
+ I   pictures on/off
+
+@{h2}Typing an address
+ SYMBOL SHIFT + Z :   V /   M .   C ?   L =   J -   0 _
+ Cursor Left/Right   move     DELETE   rub out     GRAPH   clear
+ ENTER   go                   EDIT     cancel
+@-------------------------------------------------------------------------------
+@node INDEX
+@{r}NexBrowse Guide
+@{c}@{h1}Index
+
+ @{" Address field keys " LINK KEYS_URL}
+ @{" Back (history) " LINK LINKS}
+ @{" Colours " LINK CONFIG}
+ @{" Errors " LINK MESSAGES}
+ @{" Keys on a page " LINK KEYS_PAGE}
+ @{" Limitations " LINK LIMITS}
+ @{" Links " LINK LINKS}
+ @{" Next Page " LINK LINKS}
+ @{" NEXBROWSE.CFG " LINK CONFIG}
+ @{" Pictures (I key, images=) " LINK PICTURES}
+ @{" Quick reference " LINK QUICKREF}
+ @{" Quitting " LINK KEYS_PAGE}
+ @{" Screen layout " LINK SCREEN}
+ @{" screen_rows " LINK CONFIG}
+ @{" Server setting " LINK CONFIG}
+ @{" Starting " LINK START}
+ @{" Status messages " LINK MESSAGES}
+ @{" Symbols " LINK SYMBOLS}
+ @{" Wi-Fi " LINK START}

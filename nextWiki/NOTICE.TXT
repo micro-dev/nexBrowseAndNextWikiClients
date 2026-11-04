@@ -1,0 +1,68 @@
+NextWiki - copyright and licensing notice
+=========================================
+
+This file is part of the NextWiki distribution. Keep it with NextWiki.nex.
+
+1. NextWiki software (this program and its server)
+--------------------------------------------------
+NextWiki.nex, NEXTWIKI.CFG, NEXTWIKI.GDE and the NextWiki server are
+Copyright (c) 2026 the NextWiki author(s). NextWiki is based on the
+author's nexBrowse project.
+
+The software licence is chosen by the author and stated in LICENSE (if
+present). Until a licence is added, all rights are reserved by the author.
+
+The software licence covers only the program code and its documentation.
+It does NOT cover any Wikipedia content shown by the program (section 3).
+
+2. Third-party software used to build NextWiki
+----------------------------------------------
+* z88dk (C compiler and libraries linked into NextWiki.nex):
+  Clarified Artistic Licence. https://github.com/z88dk/z88dk
+* font8x8 by Daniel Hepper (the screen font): public domain.
+* Server only: AngleSharp (MIT licence), SixLabors.ImageSharp
+  (Six Labors Split License), Microsoft .NET (MIT licence).
+
+3. Wikipedia content
+--------------------
+NextWiki is not made by, endorsed by or affiliated with Wikipedia or the
+Wikimedia Foundation. Wikipedia is a registered trademark of the Wikimedia
+Foundation, Inc.
+
+Article text is fetched from English Wikipedia (https://en.wikipedia.org)
+while you read. It is written by Wikipedia's contributors and available
+under the Creative Commons Attribution-ShareAlike 4.0 License (CC BY-SA
+4.0, https://creativecommons.org/licenses/by-sa/4.0/); additional terms
+may apply. The authors of an article are listed in its page history.
+
+Pictures each have their own licence, set by their creator. NextWiki reads
+the licence from each picture's file page on Wikipedia and shows only
+pictures that are public domain or under a free licence. Pictures whose
+licence is not free, or cannot be established, are not shown.
+
+In NextWiki, press A in an article to see its credits: the source, the
+article address, where its authors are listed, the text licence and its
+terms, the changes NextWiki made, and for each picture its creator,
+source, licence, licence terms and any required credit line. The last
+page of every article also names Wikipedia as the source and gives the
+original article's address.
+
+NextWiki changes the content only to display it on the Spectrum Next: the
+text is divided into pages, references, menus and formatting are removed,
+characters are simplified to ASCII, and pictures are reduced to 160 x 120
+dots in 16 colours.
+
+4. Displaying is not redistributing
+-----------------------------------
+NextWiki displays Wikipedia content during normal reading only. The
+server keeps processed articles and pictures in memory for at most an hour
+so that pages can be turned without downloading the article again; nothing
+is written to the SD card, and no collection of articles or pictures is
+bundled with NextWiki.
+
+If you save, print, publish or otherwise redistribute Wikipedia text or
+pictures obtained with NextWiki, you must follow their licences yourself:
+credit the authors, name the licence and link to it, indicate changes, and
+share adaptations of CC BY-SA material under the same licence. Check each
+picture's own licence on its file page; do not assume pictures are free
+to reuse.

@@ -1,0 +1,490 @@
+@title NextWiki User Guide
+@author NextWiki
+@version 1.0
+@date 2026/11/02
+@index INDEX
+@rem NextGuide document. Open it from the NextZXOS Browser, or type: .guide nextwiki.gde
+
+@-------------------------------------------------------------------------------
+@node MAIN
+@next START
+
+@{c}@{h1}NextWiki
+
+@{c}English Wikipedia on the ZX Spectrum Next
+
+Type a topic, press ENTER, and read the Wikipedia article on your Next.
+Links to other articles are highlighted and can be followed. A NextWiki
+server on the internet fetches the article from en.wikipedia.org, removes
+everything except the article itself, and sends it a page at a time.
+
+ @{" Starting NextWiki " LINK START}
+ @{" The screen " LINK SCREEN}
+ @{" Keys when reading an article " LINK KEYS_PAGE}
+ @{" Keys in the Topic field " LINK KEYS_TOPIC}
+ @{" Typing symbols " LINK SYMBOLS}
+ @{" Finding articles " LINK FINDING}
+ @{" Links and long articles " LINK LINKS}
+ @{" Pictures " LINK PICTURES}
+ @{" Credits and licences (A key) " LINK CREDITS}
+ @{" Settings: NEXTWIKI.CFG " LINK CONFIG}
+ @{" Messages on the status line " LINK MESSAGES}
+ @{" What NextWiki cannot do " LINK LIMITS}
+ @{" Quick key reference " LINK QUICKREF}
+
+@{h2}Reading this guide
+
+@{i}Right@{ui}/@{i}Left@{ui} select a link, @{i}ENTER@{ui} follows it, @{i}B@{ui} goes back.
+@{i}N@{ui} and @{i}P@{ui} turn the pages, @{i}C@{ui} returns to the contents, @{i}Q@{ui} quits.
+
+@-------------------------------------------------------------------------------
+@node START
+@next SCREEN
+@prev MAIN
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Starting NextWiki
+
+@{h2}Before the first use
+
+1) The Next's Wi-Fi module must have joined your network once. Use the
+   NextZXOS Wi-Fi setup program. The module remembers the network.
+2) NextWiki.nex and NEXTWIKI.CFG must be in the same folder on the SD
+   card, and NEXTWIKI.CFG must name your NextWiki server
+   (see @{" Settings " LINK CONFIG}).
+
+@{h2}Running it
+
+Open the NextZXOS @{b}Browser@{ub}, go to the folder, select @{b}NextWiki.nex@{ub}
+and press @{i}ENTER@{ui}. From NextBASIC you can also type:
+
+    @{b}.nexload nextwiki.nex@{ub}
+
+The welcome screen shows the server (only its first 5 letters; the rest
+appear as *) and whether NEXTWIKI.CFG was read.
+
+The Topic field already holds your home topic. Press @{i}ENTER@{ui} to read
+it, or type another topic first, for example @{b}Albert Einstein@{ub}. The
+first article takes a little longer because NextWiki checks the Wi-Fi
+module.
+
+@-------------------------------------------------------------------------------
+@node SCREEN
+@next KEYS_PAGE
+@prev START
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}The screen
+
+From top to bottom:
+
+ @{b}Topic bar@{ub}     " Topic: " then the field. Type a topic and press
+               ENTER. On the right, the [ ] Images box: press I to
+               tick it (see Pictures).
+ @{b}Title bar@{ub}     The article title. "Page 2/7" on the right means you
+               are reading page 2 of a 7-page article.
+ @{b}Article@{ub}       Headings in yellow, text in white, links in purple.
+               The selected link is shown in reverse.
+               @{b}[ Next page ]@{ub} appears after the last line when the
+               article continues.
+ @{b}Help line@{ub}     The keys you can use right now.
+ @{b}Status line@{ub}   What NextWiki is doing, or what went wrong (errors
+               appear in red). When a link is selected it shows the
+               article it leads to.
+
+One thing has @{i}focus@{ui} at a time: the Topic field or the article. The
+focused one is highlighted, and the help line changes with it.
+@{i}T@{ui} jumps to the Topic field; @{i}ENTER@{ui} or a cursor key goes back.
+
+@-------------------------------------------------------------------------------
+@node KEYS_PAGE
+@next KEYS_TOPIC
+@prev SCREEN
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Keys when reading an article
+
+@{i}Key                 What it does@{ui}
+
+Cursor Down/Right   Choose the next link
+Cursor Up/Left      Choose the previous link
+ENTER               Open the chosen article (or [ Next page ])
+SPACE               Scroll down one screen
+DELETE              Scroll up one screen
+N                   Next page of this article
+B                   Back to where you were before
+R                   Reload
+H                   Home topic
+T  (or U)           Type a new topic
+I                   Pictures on/off
+A                   Credits: authors and licences of this article
+                    and its pictures (B returns)
+Q                   Quit (then Y to confirm)
+
+Links are chosen in reading order; if the next link is a long way down,
+the cursor key scrolls the text instead so you never skip over anything.
+
+These keys work the same way as in this guide viewer.
+
+@{h2}Extra keys
+
+EXTEND MODE        Switch between the article and the Topic field
+EDIT               Un-choose the highlighted link
+INV/TRUE VIDEO     Also scroll down / up one screen
+@-------------------------------------------------------------------------------
+@node KEYS_TOPIC
+@next SYMBOLS
+@prev KEYS_PAGE
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Keys in the Topic field
+
+@{i}Key                 What it does@{ui}
+
+letters, numbers    Type (hold CAPS SHIFT for capitals - not needed,
+                    "albert einstein" works too)
+SPACE               A space, as in "Albert Einstein"
+SYMBOL SHIFT + key  Type a symbol such as - ' ( )  - see @{" Symbols " LINK SYMBOLS}
+Cursor Left/Right   Move the cursor
+DELETE              Rub out the character before the cursor
+GRAPH               Clear the whole field
+ENTER               Look the topic up
+EDIT                Cancel: put back the article's title and return
+                    to the article
+Cursor Up/Down      Go back to the article
+
+You never need to type a web address. (If you do type one, only English
+Wikipedia article addresses are accepted.)
+@-------------------------------------------------------------------------------
+@node SYMBOLS
+@next FINDING
+@prev KEYS_TOPIC
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Typing symbols
+
+Hold SYMBOL SHIFT and press the key:
+
+@{i}Symbol  Key        Symbol  Key        Symbol  Key@{ui}
+  -      J            '      7            (  )   8  9
+  :      Z            /      V            .      M
+  ,      N            &      6            !      1
+  ?      C            +      K            =      L
+  ;      O            "      P            _      0
+  %      5            #      3            ~      A
+  @@      2            *      B            $      4
+  [      Y            ]      U            <  >   R  T
+  |      S            \      D            {  }   F  G
+  ^      H            `      X
+
+Example: @{b}Mass-energy equivalence@{ub} needs SYMBOL SHIFT + J for the
+hyphen.
+
+@-------------------------------------------------------------------------------
+@node FINDING
+@next LINKS
+@prev SYMBOLS
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Finding articles
+
+Type the name of the thing you want to read about and press ENTER.
+
+If Wikipedia has an article with exactly that name, it opens straight
+away. Capital letters do not matter much: @{b}zx spectrum next@{ub} finds
+@{b}ZX Spectrum Next@{ub}.
+
+If there is no article with that exact name, NextWiki asks Wikipedia's
+own search. When the search finds a clear match, that article opens.
+Otherwise you get a page called @{b}Search: your words@{ub} listing the
+matching articles with a short extract from each. Choose one with the
+cursor keys and press ENTER.
+
+Some titles have several meanings (Mercury: the planet, the element, the
+god...). Wikipedia then shows a @{b}disambiguation page@{ub}; NextWiki says
+so at the top. Choose the article you meant from its list.
+
+If nothing at all is found, the status line says
+@{b}No Wikipedia article found for "..."@{ub}. Check the spelling, or try
+fewer words.
+
+NextWiki only uses English Wikipedia. There is no language setting.
+
+@-------------------------------------------------------------------------------
+@node LINKS
+@next PICTURES
+@prev FINDING
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Links and long articles
+
+@{h2}Following links
+
+Press Down to select the first link, keep pressing to move through the
+links, then press ENTER. The new article opens at its first page, and B
+brings the old one back where you left it. Only links to other English
+Wikipedia articles are shown as links.
+
+@{h2}Long articles
+
+The server cuts articles into pages of about 2000 characters, so the
+beginning appears quickly. "Page 1/12" in the title bar means there are
+12 pages. To read on, press @{b}N@{ub}, or select @{b}[ Next page ]@{ub} at the
+end of the text and press ENTER. The last page has no [ Next page ].
+
+Within a page, SPACE scrolls down a screen and DELETE scrolls back up.
+
+The server downloads the article from Wikipedia once; turning the pages
+only fetches the next part from the server.
+
+@{h2}What is left out
+
+Only the article itself is shown: no Wikipedia menus, no reference lists,
+notes, further reading or external links, and no [1] citation marks. The
+"Key facts" box (the infobox) is shown after the opening paragraphs.
+
+@{h2}Attribution
+
+The last page of every article ends with:
+
+  Content from Wikipedia, the free encyclopedia. Article contributors are
+  credited under the applicable Creative Commons licence. See the original
+  article on Wikipedia for attribution and licensing information.
+
+followed by the address of the original article.
+
+@{h2}History
+
+B remembers the last 6 articles, including which page you were reading.
+
+@{h2}Expired articles
+
+The server keeps articles for a while (up to an hour). If you come back
+after that, NextWiki fetches the article again by itself and carries on.
+
+@-------------------------------------------------------------------------------
+@node PICTURES
+@next CREDITS
+@prev LINKS
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Pictures
+
+NextWiki can show up to three small pictures from each article: the first
+three real pictures in the article, in order, that are freely licensed.
+The server reads each picture's licence on Wikipedia and only uses
+pictures that are public domain or under a free licence such as Creative
+Commons BY or BY-SA. Copyrighted "fair use" pictures (logos, covers,
+screenshots) are left out, so some articles have fewer pictures or none.
+Icons, flags, maps and pictures from the reference sections are never
+used. Pictures are off at first, so articles load as fast as possible.
+
+Press @{b}I@{ub} in an article to tick the box at the top right:
+
+    @{b}[X] Images@{ub}
+
+The text appears first, as usual, with a line such as
+@{b}[Image] Einstein in 1947@{ub} where each picture goes. Then the pictures
+arrive one by one and the text moves down to make room for them. You can
+keep reading and pressing keys while they load.
+
+Press @{b}I@{ub} again to hide the pictures.
+
+@{h2}What to expect
+
+Pictures are small (at most about 160 by 120 dots) and use 16 colours, so
+they are a rough preview. A page of an article shows at most 2 pictures;
+a third one appears on a later page.
+
+If a picture cannot be fetched you see @{b}[Image not available]@{ub} and its
+caption instead. The text is not affected.
+
+To have the box ticked every time NextWiki starts, put @{b}images=1@{ub} in
+NEXTWIKI.CFG.
+
+@-------------------------------------------------------------------------------
+@node CREDITS
+@next CONFIG
+@prev PICTURES
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Credits and licences (A key)
+
+Wikipedia's articles and pictures are written and made by many people
+and may be reused only under their licences. Press @{b}A@{ub} while reading an
+article to see its credits page:
+
+ @{b}Source@{ub}        English Wikipedia, the article's title and address.
+ @{b}Authors@{ub}       Who wrote it: the address of the article's history,
+                where every contributor is listed.
+ @{b}Text licence@{ub}  The licence of the text (Creative Commons Attribution-
+                ShareAlike) and where to read its terms, and what
+                NextWiki changed to fit the text on the screen.
+ @{b}Pictures@{ub}      For each picture NextWiki can show: the file, its
+                creator, source, date, licence, licence terms and any
+                credit line the licence asks for.
+
+Each picture's licence is read separately from its own page on
+Wikipedia; pictures do not all have the same licence, and pictures whose
+licence is not free, or cannot be found, are never shown.
+
+Press @{b}B@{ub} to go back to the article where you were.
+
+The last page of every article also ends with a short notice naming
+Wikipedia as the source and giving the original article's address.
+
+NextWiki itself is separate software with its own licence (NOTICE.TXT,
+next to NextWiki.nex). NextWiki only shows Wikipedia content while you
+read; it does not save, collect or pass on articles or pictures.
+
+@-------------------------------------------------------------------------------
+@node CONFIG
+@next MESSAGES
+@prev CREDITS
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Settings: NEXTWIKI.CFG
+
+NEXTWIKI.CFG is a text file in the same folder as NextWiki.nex. Each line
+is @{b}name=value@{ub}; lines starting with # are ignored. Any line can be left
+out to use the built-in default.
+
+@{i}Setting          Meaning@{ui}
+server=          Your NextWiki server's name, for example
+                 myserver.azurewebsites.net (host:port also works)
+port=            Server port, normally 80
+key=             Access key, if your server needs one
+home=            The topic shown at start-up and opened by H
+                 (default ZX Spectrum Next)
+text_colour=     Colour of article text       (default white)
+link_colour=     Colour of links              (default purple)
+screen_rows=     Rows used on screen, 22 to 32 (default 24)
+images=          1 = pictures on at start-up   (default 0)
+tls=             Leave at 0 (experimental)
+
+@{h2}Colours
+
+Use a name: white black grey lightgrey red green blue yellow cyan magenta
+purple orange pink lightblue lightgreen brown. Or give a Next colour number
+(RRRGGGBB) such as 171, 0xAB, $AB or #AB.
+
+@{h2}screen_rows
+
+24 uses the normal Spectrum screen area, which every TV and monitor shows.
+If your display shows more of the border, try 26, 28 or even 32 to see more
+text at once. If the top or bottom gets cut off, use a lower number.
+
+@-------------------------------------------------------------------------------
+@node MESSAGES
+@next LIMITS
+@prev CONFIG
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Messages on the status line
+
+@{b}Type a topic, for example Albert Einstein@{ub}
+  ENTER was pressed with an empty Topic field.
+@{b}Error: No Wikipedia article found for "..."@{ub}
+  Neither an article nor Wikipedia's search found anything. Check the
+  spelling or use fewer words.
+@{b}Error: No Wikipedia article called "..."@{ub}
+  A link led to an article that no longer exists.
+@{b}Error: Only English Wikipedia articles can be opened@{ub}
+  You typed the address of another website or another language.
+@{b}Error: Wikipedia is busy (HTTP 429) - try again shortly@{ub}
+  Wikipedia asked NextWiki to slow down. Wait a moment and press R.
+@{b}Error: Site returned HTTP 503@{ub} (or another number)
+  Wikipedia reported a problem. Press R to try again later.
+@{b}Error: Access key missing or wrong@{ub}
+  key= in NEXTWIKI.CFG does not match the server.
+@{b}Wi-Fi module not responding@{ub}
+  The Wi-Fi module did not answer. Check it is fitted; try .uart and AT.
+@{b}Wi-Fi not connected - run the NextZXOS Wi-Fi setup@{ub}
+  The module has not joined a network. Run the Wi-Fi setup once.
+@{b}Connection failed (server unreachable or DNS)@{ub}
+  Check server= and port= in NEXTWIKI.CFG, and that the server is running.
+@{b}Connection failed: Connection timed out@{ub}
+  Weak Wi-Fi, or the server was asleep. Press R to try again.
+@{b}Page loaded, but the response was incomplete@{ub}
+  The connection dropped. Press R.
+@{b}Article expired on the server - reloading...@{ub}
+  Normal after a long pause; NextWiki fetches the article again.
+@{b}Image not available@{ub}
+  A picture could not be fetched or is not a supported kind. Only that
+  picture is missing; the text is fine.
+@{b}Not enough free memory for images@{ub}
+  NextZXOS had no spare memory for pictures. Text still works.
+
+After any error the article you were reading stays on screen, and the
+topic you typed is kept so you can correct it. B and R still work.
+
+@-------------------------------------------------------------------------------
+@node LIMITS
+@next QUICKREF
+@prev MESSAGES
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}What NextWiki cannot do
+
+@{b}English Wikipedia only.@{ub} Other languages and other websites cannot
+be opened.
+
+@{b}No bold or italics.@{ub} The Next's text screen has one style; words that
+are bold or italic on Wikipedia look like normal text.
+
+@{b}Tables are simplified.@{ub} Each row becomes one line with | between
+the cells. Formulas appear as their TeX source, for example a^{2}+b^{2}.
+
+@{b}Plain letters only.@{ub} Accents are removed (an accented e shows as a
+plain e) and other alphabets, such as Japanese or Cyrillic, show as ?.
+
+@{b}Not private.@{ub} The connection between the Next and the NextWiki server
+is not encrypted, so anyone on the network path can see what you read.
+
+@{b}No editing, logins or talk pages.@{ub} NextWiki is for reading articles.
+
+@-------------------------------------------------------------------------------
+@node QUICKREF
+@prev LIMITS
+@toc MAIN
+@{r}NextWiki Guide
+@{c}@{h1}Quick key reference
+
+@{h2}Reading an article
+ Cursor keys   choose a link        ENTER    open it
+ SPACE         scroll down          DELETE   scroll up
+ N   next page      B   back        R   reload
+ H   home topic     T   new topic   Q   quit
+ I   pictures on/off               A   credits and licences
+
+@{h2}Typing a topic
+ SYMBOL SHIFT + J -   7 '   8 (   9 )   N ,   Z :
+ Cursor Left/Right   move     DELETE   rub out     GRAPH   clear
+ ENTER   look up              EDIT     cancel
+@-------------------------------------------------------------------------------
+@node INDEX
+@{r}NextWiki Guide
+@{c}@{h1}Index
+
+ @{" Back (history) " LINK LINKS}
+ @{" Colours " LINK CONFIG}
+ @{" Credits, licences, authors (A key) " LINK CREDITS}
+ @{" Disambiguation pages " LINK FINDING}
+ @{" Errors " LINK MESSAGES}
+ @{" Keys in an article " LINK KEYS_PAGE}
+ @{" Limitations " LINK LIMITS}
+ @{" Links " LINK LINKS}
+ @{" Next page " LINK LINKS}
+ @{" NEXTWIKI.CFG " LINK CONFIG}
+ @{" Pictures (I key, images=) " LINK PICTURES}
+ @{" Quick reference " LINK QUICKREF}
+ @{" Quitting " LINK KEYS_PAGE}
+ @{" Screen layout " LINK SCREEN}
+ @{" screen_rows " LINK CONFIG}
+ @{" Search results " LINK FINDING}
+ @{" Server setting " LINK CONFIG}
+ @{" Starting " LINK START}
+ @{" Status messages " LINK MESSAGES}
+ @{" Symbols " LINK SYMBOLS}
+ @{" Topic field keys " LINK KEYS_TOPIC}
+ @{" Wi-Fi " LINK START}
